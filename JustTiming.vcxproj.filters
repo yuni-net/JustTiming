@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="God">
+      <UniqueIdentifier>{8b830153-74d6-4574-8486-2df5742f8b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{07e52014-3624-4115-8b15-e24c4c5edfa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{4d2efbd1-bc6d-4f94-ad1c-6fdc306c1c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CPU">
+      <UniqueIdentifier>{9e8f14e3-37f9-4eef-90d5-0d94febd74f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{3a207972-361e-4af0-a048-38061a51f7c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="God\GameMain">
+      <UniqueIdentifier>{7756b7b9-e6c5-42e8-bb74-9f701a49ec26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="God\GameMain\CharaMateStorage">
+      <UniqueIdentifier>{920ccc65-75b7-42d9-89d8-30b47fdc996c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="God\GameMain\CameraWork">
+      <UniqueIdentifier>{e89512cd-28cf-4589-9c38-2288a53bf315}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\WinMain.cpp" />
+    <ClCompile Include="src\God.cpp">
+      <Filter>God</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Character.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameMain.cpp">
+      <Filter>God\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CharaMateStorage.cpp">
+      <Filter>God\GameMain\CharaMateStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CameraWork.cpp">
+      <Filter>God\GameMain\CameraWork</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\God.h">
+      <Filter>God</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CharaType.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameMain.h">
+      <Filter>God\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CharaMateStorage.h">
+      <Filter>God\GameMain\CharaMateStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CameraWork.h">
+      <Filter>God\GameMain\CameraWork</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
