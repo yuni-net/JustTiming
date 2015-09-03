@@ -18,6 +18,8 @@ public:
 	void draw();
 
 	const Player & get_player();
+	const CharaMateStorage & get_chara_mate_storage() const;
+	SkillManager & get_skill_manager();
 
 
 
@@ -27,15 +29,7 @@ private:
 	CharaMateStorage chara_mate_storage;
 	CameraWork camera_work;
 	si3::Leaf ground;
+	SkillManager skill_manager;
 
 
-	/**
-	 * @brief キャラクターを初期化する。
-	 * @param
-		chara: 初期化したいキャラクターを指定します。
-		type: キャラタイプを指定します。
-		x: x座標を指定します。
-		y: y座標を指定します。
-	 */
-	void init_chara(Character & chara, CharaType::CharaTypeEnum type, float x, float z);
 };

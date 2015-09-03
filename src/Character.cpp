@@ -1,8 +1,16 @@
 #include "Character.h"
+#include "God.h"
 
-void Character::init(CharaType::CharaTypeEnum chara_type, si3::ModelData & model_data, float x, float z)
+void Character::init(
+	int chara_id,
+	CharaType::CharaTypeEnum chara_type,
+	float x, float z)
 {
-	model.model_data(model_data);
+	GameMain & game_main = God::get_game_main();
+
+	this->chara_id = chara_id;
+	this->chara_type = chara_type;
+	model.model_data(game_main.get_chara_mate_storage().get_model_data(chara_type));
 	model.x(x);
 	model.y(0.0f);
 	model.z(z);
@@ -24,15 +32,27 @@ void Character::suggest_skill_spec(float vx, float vz)
 
 void Character::invoke_skill_basic(float vx, float vz)
 {
-	// todo
+	const float radian = fw::xy2radian(vx, vz);
+	God::get_game_main().get_skill_manager().invoke_basic(
+		model.x(), model.z(),
+		radian,
+		chara_type, chara_id);
 }
 void Character::invoke_skill_util(float vx, float vz)
 {
-	// todo
+	const float radian = fw::xy2radian(vx, vz);
+	God::get_game_main().get_skill_manager().invoke_util(
+		model.x(), model.z(),
+		radian,
+		chara_type, chara_id);
 }
 void Character::invoke_skill_spec(float vx, float vz)
 {
-	// todo
+	const float radian = fw::xy2radian(vx, vz);
+	God::get_game_main().get_skill_manager().invoke_spec(
+		model.x(), model.z(),
+		radian,
+		chara_type, chara_id);
 }
 
 void Character::move(const float vx, const float vz)

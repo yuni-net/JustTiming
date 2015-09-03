@@ -3,6 +3,9 @@
 #include <simplect3D.h>
 #include "CharaType.h"
 
+/**
+ * キャラクターの実体。
+ */
 class Character
 {
 public:
@@ -12,15 +15,18 @@ public:
 	       chara_type: キャラクタータイプをCharaType::CharaTypeEnum値で指定します。
 		   model_data: 設定したいモデルデータを指定します。
 	       x: 初期x座標を指定します。
-		   y: 初期y座標を指定します。
+		   z: 初期z座標を指定します。
 	 */
-	void init(CharaType::CharaTypeEnum chara_type, si3::ModelData & model_data, float x, float z);
+	void init(
+		int chara_id,
+		CharaType::CharaTypeEnum chara_type,
+		float x, float z);
 
 	/**
 	 * @brief 特定スキルのサジェストを表示します。
 	 * @param
 	       vx: スティックの傾きのx座標を指定します。
-		   vy: スティックの傾きのy座標を指定します。
+		   vz: スティックの傾きのz座標を指定します。
 	 */
 	void suggest_skill_basic(float vx, float vz);
 	void suggest_skill_util(float vx, float vz);
@@ -30,7 +36,7 @@ public:
 	 * @brief 特定スキルを発動します。
 	 * @param
 		 vx: スティックの傾きのx座標を指定します。
-		 vy: スティックの傾きのy座標を指定します。
+		 vz: スティックの傾きのz座標を指定します。
 	 */
 	void invoke_skill_basic(float vx, float vz);
 	void invoke_skill_util(float vx, float vz);
@@ -40,7 +46,7 @@ public:
 	* @brief キャラを移動させます。
 	* @param
 		vx: スティックの傾きのx座標を指定します。
-		vy: スティックの傾きのy座標を指定します。
+		vz: スティックの傾きのz座標を指定します。
 	*/
 	void move(const float vx, const float vz);
 
@@ -54,8 +60,19 @@ public:
 
 
 private:
+	int chara_id;
+	CharaType::CharaTypeEnum chara_type;
 	si3::Model model;
 	float move_speed;
+
+	//Suggest suggest;
+
+	si3::Leaf suggest_basic;
+	si3::Leaf suggest_util;
+	si3::Leaf suggest_spec;
+
+	//fw::Array<Buff> buff_list;
+	//Buff => buff_type, buff_count, buff_max_count
 
 
 

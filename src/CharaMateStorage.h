@@ -14,7 +14,7 @@ public:
 	/**
 	 * @brief 特定の種類のモデルデータを返す。
 	 */
-	si3::ModelData & get_model_data(CharaType::CharaTypeEnum type);
+	const si3::ModelData & get_model_data(CharaType::CharaTypeEnum type) const;
 
 
 

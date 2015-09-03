@@ -7,7 +7,7 @@ void CharaMateStorage::load()
 	list[CharaType::a_type].load("data/a_type.pmd");
 }
 
-si3::ModelData & CharaMateStorage::get_model_data(CharaType::CharaTypeEnum type)
+const si3::ModelData & CharaMateStorage::get_model_data(CharaType::CharaTypeEnum type) const
 {
 	return list[type];
 }

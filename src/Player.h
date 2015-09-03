@@ -2,6 +2,9 @@
 
 #include "Character.h"
 
+/**
+ * プレイヤーが選択したキャラを間接的に操作する
+ */
 class Player
 {
 public:

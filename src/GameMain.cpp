@@ -14,7 +14,7 @@ void GameMain::init()
 	camera_work.init();
 
 	chara_list.setsize(1);
-	init_chara(chara_list[0], CharaType::a_type, 0.0f, 0.0f);
+	chara_list[0].init(CharaType::a_type, 0.0f, 0.0f);
 
 	player.init(chara_list[0]);
 
@@ -47,10 +47,16 @@ const Player & GameMain::get_player()
 	return player;
 }
 
-
-
-
-void GameMain::init_chara(Character & chara, CharaType::CharaTypeEnum type, float x, float z)
+const CharaMateStorage & GameMain::get_chara_mate_storage() const
 {
-	chara.init(type, chara_mate_storage.get_model_data(type), x, z);
+	return chara_mate_storage;
 }
+
+
+SkillManager & GameMain::get_skill_manager()
+{
+	return skill_manager;
+}
+
+
+
