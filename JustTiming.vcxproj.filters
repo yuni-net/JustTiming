@@ -25,6 +25,15 @@
     <Filter Include="God\GameMain\CameraWork">
       <UniqueIdentifier>{e89512cd-28cf-4589-9c38-2288a53bf315}</UniqueIdentifier>
     </Filter>
+    <Filter Include="God\GameMain\SkillManager">
+      <UniqueIdentifier>{586893ef-019f-4ddf-b6ac-23bcebd41c52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="God\GameMain\SkillManager\SkillIdDB">
+      <UniqueIdentifier>{372005ae-754d-44f2-8df5-d2a088209ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="God\GameMain\SkillManager\Skill">
+      <UniqueIdentifier>{7bc89d0f-0300-4f26-8f92-b08bb8772a59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\WinMain.cpp" />
@@ -45,6 +54,15 @@
     </ClCompile>
     <ClCompile Include="src\Player.cpp">
       <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillManager.cpp">
+      <Filter>God\GameMain\SkillManager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillIdDB.cpp">
+      <Filter>God\GameMain\SkillManager\SkillIdDB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skill.cpp">
+      <Filter>God\GameMain\SkillManager\Skill</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +86,15 @@
     </ClInclude>
     <ClInclude Include="src\CameraWork.h">
       <Filter>God\GameMain\CameraWork</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillManager.h">
+      <Filter>God\GameMain\SkillManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillIdDB.h">
+      <Filter>God\GameMain\SkillManager\SkillIdDB</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skill.h">
+      <Filter>God\GameMain\SkillManager\Skill</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

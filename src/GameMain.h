@@ -6,6 +6,7 @@
 #include "Player.h"
 #include "Character.h"
 #include "CameraWork.h"
+#include "SkillManager.h"
 
 
 

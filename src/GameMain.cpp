@@ -6,15 +6,17 @@
 void GameMain::load()
 {
 	chara_mate_storage.load();
+	skill_manager.load();
 	ground.load("data/ground.jpg");
 }
 
 void GameMain::init()
 {
+	skill_manager.init();
 	camera_work.init();
 
 	chara_list.setsize(1);
-	chara_list[0].init(CharaType::a_type, 0.0f, 0.0f);
+	chara_list[0].init(1, CharaType::a_type, 0.0f, 0.0f);
 
 	player.init(chara_list[0]);
 
@@ -27,12 +29,14 @@ void GameMain::init()
 
 void GameMain::update()
 {
-	camera_work.update();
 	player.update();
+	skill_manager.update();
+	camera_work.update();
 }
 
 void GameMain::draw()
 {
+	skill_manager.draw();
 	for (fw::uint chara_No = 0; chara_No < chara_list.size(); ++chara_No)
 	{
 		chara_list[chara_No].draw();
