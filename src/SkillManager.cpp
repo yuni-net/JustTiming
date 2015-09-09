@@ -3,21 +3,42 @@
 void SkillManager::load()
 {
 	// todo
+	skill_id_DB.load();
 }
 
 void SkillManager::init()
 {
 	// todo
+	skill_list.clear();
 }
 
 void SkillManager::update()
 {
 	// todo
+	auto rator = skill_list.begin();
+	while (rator != skill_list.end())
+	{
+		Skill & skill = *rator;
+		bool should_delete = skill.update();
+		if (should_delete)
+		{
+			rator = skill_list.erase(rator);
+		}
+		else
+		{
+			++rator;
+		}
+	}
 }
 
 void SkillManager::draw()
 {
-	// todo
+	auto rator = skill_list.begin();
+	while (rator != skill_list.end())
+	{
+		Skill & skill = *rator;
+		skill.draw();
+	}
 }
 
 
@@ -30,4 +51,5 @@ void SkillManager::invoke_skill(
 {
 	// todo
 }
+
 

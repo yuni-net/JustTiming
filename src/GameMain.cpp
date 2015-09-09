@@ -6,12 +6,14 @@
 void GameMain::load()
 {
 	chara_mate_storage.load();
+	skill_manager.load();
 	ground.load("data/ground.jpg");
 	skill_manager.load();
 }
 
 void GameMain::init()
 {
+	skill_manager.init();
 	camera_work.init();
 
 	chara_list.setsize(1);
@@ -32,15 +34,16 @@ void GameMain::update()
 {
 //	collisionm.clear();
 
-	camera_work.update();
 	player.update();
 	skill_manager.update();
+	camera_work.update();
 
 //	collisionm.judge();
 }
 
 void GameMain::draw()
 {
+	skill_manager.draw();
 	for (fw::uint chara_No = 0; chara_No < chara_list.size(); ++chara_No)
 	{
 		chara_list[chara_No].draw();

@@ -1,7 +1,10 @@
 #pragma once
 
-#include "CharaType.h"
+#include <list>
 #include "SkillType.h"
+#include "CharaType.h"
+#include "SkillIdDB.h"
+#include "Skill.h"
 
 class SkillManager
 {
@@ -17,4 +20,13 @@ public:
 		const CharaType::CharaTypeEnum chara_type,
 		const int chara_id,
 		const SkillType::SkillTypeEnum skill_type);
+
+
+
+
+
+
+private:
+	std::list<Skill> skill_list;
+	SkillIdDB skill_id_DB;
 };
