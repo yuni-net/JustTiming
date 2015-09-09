@@ -17,42 +17,19 @@ void Character::init(
 	move_speed = 0.06f;
 }
 
-void Character::suggest_skill_basic(float vx, float vz)
-{
-	// todo
-}
-void Character::suggest_skill_util(float vx, float vz)
-{
-	// todo
-}
-void Character::suggest_skill_spec(float vx, float vz)
+void Character::suggest_skill(float vx, float vz, SkillType::SkillTypeEnum skill_type)
 {
 	// todo
 }
 
-void Character::invoke_skill_basic(float vx, float vz)
+void Character::invoke_skill(float vx, float vz, SkillType::SkillTypeEnum skill_type)
 {
 	const float radian = fw::xy2radian(vx, vz);
-	God::get_game_main().get_skill_manager().invoke_basic(
+	God::get_game_main().get_skill_manager().invoke_skill(
 		model.x(), model.z(),
 		radian,
-		chara_type, chara_id);
-}
-void Character::invoke_skill_util(float vx, float vz)
-{
-	const float radian = fw::xy2radian(vx, vz);
-	God::get_game_main().get_skill_manager().invoke_util(
-		model.x(), model.z(),
-		radian,
-		chara_type, chara_id);
-}
-void Character::invoke_skill_spec(float vx, float vz)
-{
-	const float radian = fw::xy2radian(vx, vz);
-	God::get_game_main().get_skill_manager().invoke_spec(
-		model.x(), model.z(),
-		radian,
-		chara_type, chara_id);
+		chara_type, chara_id,
+		skill_type);
 }
 
 void Character::move(const float vx, const float vz)

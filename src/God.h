@@ -2,6 +2,9 @@
 
 #include "GameMain.h"
 
+/**
+ * このプログラムの全てを統括するクラス。
+ */
 class God
 {
 public:
