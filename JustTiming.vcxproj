@@ -17,6 +17,7 @@
     <ClCompile Include="src\GameMain.cpp" />
     <ClCompile Include="src\God.cpp" />
     <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\SkillManager.cpp" />
     <ClCompile Include="src\WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -27,6 +28,8 @@
     <ClInclude Include="src\GameMain.h" />
     <ClInclude Include="src\God.h" />
     <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\SkillManager.h" />
+    <ClInclude Include="src\SkillType.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3AEEA53D-20A2-41B9-9DF2-963115183080}</ProjectGuid>

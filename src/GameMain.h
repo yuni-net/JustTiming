@@ -6,9 +6,12 @@
 #include "Player.h"
 #include "Character.h"
 #include "CameraWork.h"
+#include "SkillManager.h"
 
 
-
+/**
+ * このゲームのメイン部分を司るクラス。
+ */
 class GameMain
 {
 public:
@@ -20,6 +23,7 @@ public:
 	const Player & get_player();
 	const CharaMateStorage & get_chara_mate_storage() const;
 	SkillManager & get_skill_manager();
+//	CollisionManager & get_collision_manager();
 
 
 
@@ -30,6 +34,7 @@ private:
 	CameraWork camera_work;
 	si3::Leaf ground;
 	SkillManager skill_manager;
+//	CollisionManager collisionm;
 
 
 };

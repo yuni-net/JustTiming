@@ -25,6 +25,9 @@
     <Filter Include="God\GameMain\CameraWork">
       <UniqueIdentifier>{e89512cd-28cf-4589-9c38-2288a53bf315}</UniqueIdentifier>
     </Filter>
+    <Filter Include="about_skill">
+      <UniqueIdentifier>{a0322758-400a-4ba1-9a0c-fa3b1a0015a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\WinMain.cpp" />
@@ -45,6 +48,9 @@
     </ClCompile>
     <ClCompile Include="src\Player.cpp">
       <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillManager.cpp">
+      <Filter>about_skill</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +74,12 @@
     </ClInclude>
     <ClInclude Include="src\CameraWork.h">
       <Filter>God\GameMain\CameraWork</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillType.h">
+      <Filter>about_skill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillManager.h">
+      <Filter>about_skill</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
